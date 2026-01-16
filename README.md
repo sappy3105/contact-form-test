@@ -7,6 +7,7 @@
 **Docker ビルド**
 
 - git clone git@github.com:sappy3105/contact-form-test.git
+- cd contact-form-test
 - docker-compose up -d --build
 
 **Laravel 環境構築**
