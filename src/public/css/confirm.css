@@ -1,0 +1,126 @@
+.confirm-form__content {
+    margin: 0 auto;
+    padding: 15px 15px;
+    max-width: 1230px;
+    color: #4e3e2d;
+}
+
+.confirm-form__heading {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #4e3e2d;
+    font-family: "Inria Serif", serif;
+    text-align: center;
+}
+
+.confirm__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.confirm__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.confirm-table {
+    border: 1px solid #cac5c5;
+    color: #4e3e2d;
+}
+
+.confirm-table__inner {
+    width: 100%;
+}
+
+.confirm-table__header {
+    padding: 15px 30px;
+    width: 30%;
+    border-bottom: 1px solid #cac5c5;
+    background: #4e3e2d;
+    color: white;
+    text-align: left;
+    font-weight: normal;
+}
+
+.confirm-table__text,
+.confirm-table__text input {
+    font-size: 16px;
+    font-family: inherit;
+    color: #4e3e2d;
+}
+
+.confirm-table__text {
+    padding: 15px;
+    border-bottom: 1px solid #cac5c5;
+}
+
+.confirm-table__text input {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.confirm-table__text textarea {
+    width: 100%;
+    height: 100px;
+    border: none;
+    resize: none;
+    background: transparent;
+    font-size: 16px;
+    font-family: inherit;
+    color: #4e3e2d;
+    outline: none;
+    padding: 0;
+    display: block;
+}
+
+.confirm-table__row:last-child .confirm-table__header,
+.confirm-table__row:last-child .confirm-table__text {
+    border-bottom-width: 0;
+}
+
+/* 送信ボタン */
+.form__button {
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form__button-submit {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #4e3e2d;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modify {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modify-button {
+    background: none;
+    border: none;
+    color: #4e3e2d;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    left: 100px;
+}

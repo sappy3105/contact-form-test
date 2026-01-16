@@ -1,0 +1,212 @@
+/* タイトル */
+.contact-form__content {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+    color: #4e3e2d;
+}
+
+.contact-form__heading {
+    margin-bottom: 30px;
+}
+
+h2{
+    color: #4e3e2d;
+    font-family: "Inria Serif", serif;
+    text-align: center;
+}
+
+/* フォーム全体 */
+.form {
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* 各フォーム見出し */
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form__group-title {
+    width: 30%;
+    text-align: left;
+}
+
+.form__label--required {
+    margin-left: 3px;
+    color: #ff0000;
+}
+
+
+/* 各フォーム入力欄 */
+.form__group-content {
+    width: 70%;
+    text-align: left;
+}
+
+/* 入力欄（共通） */
+.form__input--email,
+.form__input--address,
+.form__input--building,
+.form__input--detail {
+    width: 100%;
+}
+
+.form__input--email input,
+.form__input--address input,
+.form__input--building input {
+    width: 100%;
+    padding: 10px 20px;
+    background: #F5F5F5;
+    border: none;
+    border-radius: 3px;
+}
+
+.form__input-inner input,
+.gender-text,
+.form__input--email input,
+.form__input--tel input,
+.form__input--address input,
+.form__input--building input,
+.category-select,
+.form__input--detail textarea {
+    font-size: 16px;
+    color: #4e3e2d;
+}
+
+.form__group-content input::placeholder,
+.form__group-content textarea::placeholder {
+    font-size: 16px;
+}
+
+/* 名前 */
+.form__input--name {
+    display: flex;
+    width: 100%;
+}
+
+.form__input-inner {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form__input-inner:first-of-type {
+    margin-right: 20px;
+}
+
+.form__input-inner input {
+    width: 100%;
+    padding: 10px 20px;
+    background: #F5F5F5;
+    border: none;
+    border-radius: 3px;
+}
+
+/* 性別 */
+.form__input--gender {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.gender-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.gender-input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    color: #4e3e2d;
+    cursor: pointer;
+}
+
+/* 電話番号 */
+.form__input--tel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.form__input--tel input {
+    flex: 1;
+    min-width: 20px;
+    padding: 10px 20px;
+    background: #F5F5F5;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.form__input--tel span {
+    width: 20px;
+    text-align: center;
+}
+
+/* お問い合わせの種類 */
+.form__input--category {
+    width: 50%;
+}
+
+.category-select {
+    width: 100%;
+    padding: 10px 20px;
+    background: #F5F5F5;
+    border: none;
+    border-radius: 3px;
+    color: #4e3e2d;
+}
+
+.category-select:invalid {
+    color: #a39b93;
+    /* 薄いグレー。お好みの薄さに調整してください */
+}
+
+.category-select option {
+    color: #4e3e2d;
+}
+
+/* お問い合わせ内容 */
+.form__input--detail textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px 20px;
+    background: #F5F5F5;
+    border: none;
+    resize: none;
+    border-radius: 3px;
+}
+
+/* 確認画面ボタン */
+.form__button {
+    margin: 15px;
+    padding: 30px;
+    text-align: center;
+}
+
+.form__button-submit {
+    padding: 10px 15px;
+    width: 20%;
+    border: none;
+    border-radius: 3px;
+    background: #4e3e2d;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* エラーメッセージ */
+.form__error {
+    height: 20px;
+    margin-top: 5px;
+    color: #ff0000;
+    text-align: left;
+    font-size: 14px;
+}

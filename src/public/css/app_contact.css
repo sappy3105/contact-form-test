@@ -1,0 +1,18 @@
+.header {
+    border-bottom: 3px solid #f3ebf5;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 15px 30px;
+    max-width: 1230px;
+    text-align: center;
+}
+
+.header__logo {
+    color: #4e3e2d;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "Inria Serif", serif;
+}
