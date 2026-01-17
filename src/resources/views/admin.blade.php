@@ -32,8 +32,7 @@
                 @endforeach
             </select>
 
-            <input class="search-form__date" type="date" name="updated_at"
-                value="{{ request('updated_at') }}">
+            <input class="search-form__date" type="date" name="updated_at" value="{{ request('updated_at') }}">
 
             <button class="search-form__button" type="submit">検索</button>
 
@@ -59,7 +58,7 @@
                     <th>お名前</th>
                     <th>性別</th>
                     <th>メールアドレス</th>
-                    <th>お問い合わせの種類</th>
+                    <th>お問い合わせの種類</th>{{-- 機能要件には「お問い合わせ内容」と記載されていたが、デザインUIを優先した --}}
                     <th></th>
                 </tr>
                 @foreach ($contacts as $contact)

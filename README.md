@@ -23,7 +23,7 @@
 
 - お問い合わせ画面： http://localhost/
 - ユーザー登録： http://localhost/register
-- ユーザーログイン： http://localhost/login
+- 管理者ログイン： http://localhost/login
 - phpMyAdmin： http://localhost:8080/
 
 ## 使用技術（実行環境）
