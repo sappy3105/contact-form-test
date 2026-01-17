@@ -23,7 +23,6 @@
 
 - お問い合わせ画面： http://localhost/
 - ユーザー登録： http://localhost/register
-- 管理者ログイン： http://localhost/login
 - phpMyAdmin： http://localhost:8080/
 
 ## 使用技術（実行環境）
@@ -32,7 +31,6 @@
 - Laravel 8.83.29
 - MySQL 8.0.26
 - nginx 1.21.1
-- phpMyAdmin 5.2.3
 
 ## ER 図
 
