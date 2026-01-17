@@ -13,8 +13,7 @@
         {{-- 検索・リセット機能 --}}
         <form class="search-form" action="/search" method="get">
             @csrf
-            <input class="search-form__item-input" type="text" name="keyword" value="{{ request('keyword') }}"
-                placeholder="名前やメールアドレスを入力してください">
+            <input class="search-form__item-input" type="text" name="keyword" value="{{ request('keyword') }}" placeholder="名前やメールアドレスを入力してください">
 
             <select class="search-form__item-gender" name="gender">
                 <option value="">性別</option>
@@ -46,7 +45,7 @@
                     エクスポート
                 </a>
             </div>
-            <div class="pagination">
+            <div class="pagination-container">
                 {{ $contacts->appends(request()->query())->links('pagination::bootstrap-4') }}
             </div>
         </div>

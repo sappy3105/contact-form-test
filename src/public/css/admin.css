@@ -39,6 +39,49 @@ h2 {
     background: #F5F5F5;
 }
 
+/* 選択枠の逆三角形 */
+.search-form__item-gender,
+.search-form__item-category
+{
+    /* デフォルトの矢印削除 */
+    appearance: none;
+    -webkit-appearance: none;
+
+    /* 逆三角形作成 */
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%234e3e2d%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 18px;
+    padding-right: 25px;
+    cursor: pointer;
+}
+
+.search-form__date {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%234e3e2d%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 18px;
+    padding-right: 25px;
+}
+
+/* カレンダーアイコン非表示 */
+.search-form__date::-webkit-calendar-picker-indicator {
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
 /* 検索とリセットボタンの幅を同じにする */
 .search-form__button,
 .reset__button {
@@ -64,7 +107,7 @@ h2 {
 
 /* エクスポートとページネーション */
 .table__nav {
-    margin: 0 auto;
+    margin: 20px auto;
     width: 80%;
     display: flex;
     justify-content: space-between;
@@ -93,10 +136,16 @@ h2 {
 }
 
 /* ページネーション */
+.pagination-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .pagination {
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .pagination li {
