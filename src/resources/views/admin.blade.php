@@ -10,6 +10,7 @@
             <h2>Admin</h2>
         </div>
 
+        {{-- 検索・リセット機能 --}}
         <form class="search-form" action="/search" method="get">
             @csrf
             <input class="search-form__item-input" type="text" name="keyword" value="{{ request('keyword') }}"
@@ -36,9 +37,10 @@
 
             <button class="search-form__button" type="submit">検索</button>
 
-            <a href="/admin" class="reset__button">リセット</a>
+            <a href="/reset" class="reset__button">リセット</a>
         </form>
 
+        {{-- エクスポート・ページネーション --}}
         <div class="table__nav">
             <div class="export button">
                 <a href="{{ url('/export') }}?{{ http_build_query(request()->query()) }}" class="export-button-link">
@@ -50,6 +52,7 @@
             </div>
         </div>
 
+        {{-- お問い合わせテーブル表示 --}}
         <div class="contact-table">
             <table class="contact-table__inner">
                 <tr class="contact-table__row">
@@ -79,6 +82,7 @@
             </table>
         </div>
 
+        {{-- モーダル画面 --}}
         @foreach ($contacts as $contact)
             <div id="modal-{{ $contact['id'] }}" class="modal-overlay">
                 <div class="modal-window">

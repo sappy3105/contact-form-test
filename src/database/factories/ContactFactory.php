@@ -21,7 +21,7 @@ class ContactFactory extends Factory
             'last_name' => mb_substr($this->faker->lastName(), 0, 8),
             'gender' => $this->faker->numberBetween(1, 3),
             'email' => $this->faker->safeEmail(),
-            'tel' => $this->faker->numerify(str_repeat('#', rand(11, 15))),
+            'tel' => $this->faker->numerify(str_repeat('#', rand(10, 11))),
             'address' => $this->faker->address(),
             'building' => $this->faker->optional(0.7)->secondaryAddress(),
             'detail' => $this->faker->realText(120),

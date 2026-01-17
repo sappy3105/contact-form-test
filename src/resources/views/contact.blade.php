@@ -9,7 +9,7 @@
         <div class="contact-form__heading">
             <h2>Contact</h2>
         </div>
-        <form class="form" action="/confirm" method="post">
+        <form class="form" action="/confirm" method="post" novalidate>{{-- ブラウザのエラーを非表示 --}}
             @csrf
             <div class="form__group">
                 <div class="form__group-title">
@@ -74,7 +74,8 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--email">
-                        <input type="email" name="email" placeholder="例　test@example.com" value="{{ old('email') }}" />
+                        <input type="text" name="email" placeholder="例　test@example.com" value="{{ old('email') }}" />
+                        {{-- ブラウザのエラーを外すためにtype="text"にした --}}
                     </div>
                     <div class="form__error">
                         @error('email')

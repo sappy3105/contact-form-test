@@ -27,6 +27,7 @@ class Contact extends Model
         return $this->belongsTo(Category::class);
     }
 
+    // キーワード検索
     public function scopeKeywordSearch(Builder $query, $keyword)
     {
         if (!empty($keyword)) {
@@ -39,19 +40,24 @@ class Contact extends Model
             });
         }
     }
+
+    // 性別検索
     public function scopeGenderSearch(Builder $query, $gender)
     {
-        // "性別"（空）や"全て"（all）以外の場合に絞り込み
         if (!empty($gender) && $gender !== 'all') {
             $query->where('gender', $gender);
         }
     }
+
+    // カテゴリ検索
     public function scopeCategorySearch(Builder $query, $category_id)
     {
         if (!empty($category_id)) {
             $query->where('category_id', $category_id);
         }
     }
+
+    // 日付検索
     public function scopeDateSearch(Builder $query, $date)
     {
         if (!empty($date)) {

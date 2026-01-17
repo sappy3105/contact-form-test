@@ -18,13 +18,11 @@
 
 <body>
     <div class="thanks__content">
-        {{-- ここに背景用のdivを置く（パターン2の場合） --}}
         <div class="thanks__background">Thank you</div>
 
         <div class="thanks__inner">
             <h2 class="thanks__message">お問い合わせありがとうございました</h2>
             <a href="/" class="thanks__button">HOME</a>
-
         </div>
     </div>
 </body>

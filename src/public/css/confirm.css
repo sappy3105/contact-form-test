@@ -105,6 +105,7 @@ h2 {
     cursor: pointer;
 }
 
+/* 修正ボタン */
 .modify {
     width: 70%;
     margin: 0 auto;

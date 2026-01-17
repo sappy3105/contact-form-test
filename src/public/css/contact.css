@@ -116,15 +116,39 @@ h2{
 .gender-item {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
     cursor: pointer;
 }
 
+/* デフォルトのボタンを非表示 */
 .gender-input[type="radio"] {
+    display: none;
+}
+
+/* ボタンを自作 */
+.gender-input[type="radio"]+.gender-text::before {
+    content: "";
+    display: inline-block;
     width: 16px;
     height: 16px;
+    border: 1px solid #4e3e2d;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    transition: background 0.2s;
+}
+
+/* ボタンチェックされた時 */
+.gender-input[type="radio"]:checked+.gender-text::before {
+    background-color: #4e3e2d;
+}
+
+.gender-text {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
     color: #4e3e2d;
-    cursor: pointer;
 }
 
 /* 電話番号 */
@@ -162,12 +186,11 @@ h2{
     background: #F5F5F5;
     border: none;
     border-radius: 3px;
-    color: #4e3e2d;
+    color: #a7a099;
 }
 
-.category-select:invalid {
-    color: #a39b93;
-    /* 薄いグレー。お好みの薄さに調整してください */
+.category-select:valid {
+    color: #4e3e2d;
 }
 
 .category-select option {
@@ -205,8 +228,6 @@ h2{
 /* エラーメッセージ */
 .form__error {
     height: 20px;
-    margin-top: 5px;
     color: #ff0000;
     text-align: left;
-    font-size: 14px;
 }

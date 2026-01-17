@@ -25,7 +25,7 @@ class RegisterRequest extends FormRequest
     {
         return [
             'name' => ['required'],
-            'email' => ['required', 'email'],
+            'email' => ['required', 'email'], //uniqueがテーブル仕様書に無かったため、はずした
             'password' => ['required'],
         ];
     }

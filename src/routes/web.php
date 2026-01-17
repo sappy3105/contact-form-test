@@ -27,6 +27,6 @@ Route::post('/register', [ContactController::class, 'register']);
 Route::delete('/delete', [ContactController::class, 'delete']);
 
 Route::get('/search', [ContactController::class, 'search']);
-Route::get('/reset', [ContactController::class, '']);
+Route::get('/reset', [ContactController::class, 'admin']);
 
 Route::get('/export', [ContactController::class, 'export']);

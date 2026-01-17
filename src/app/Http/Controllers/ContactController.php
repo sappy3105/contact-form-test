@@ -16,6 +16,7 @@ use Laravel\Fortify\Http\Responses\RegisterResponse;
 
 class ContactController extends Controller
 {
+    // ログイン処理
     public function login(LoginRequest $request)
     {
         if (Auth::attempt($request->only('email', 'password'), $request->filled('remember'))) {
@@ -27,6 +28,7 @@ class ContactController extends Controller
         ]);
     }
 
+    // 新規登録処理
     public function register(RegisterRequest $request)
     {
         $user = User::create([
@@ -40,6 +42,7 @@ class ContactController extends Controller
         return app(RegisterResponse::class);
     }
 
+    // 管理者画面処理
     public function admin(Request $request)
     {
         $contacts = Contact::with('category')->paginate(7);
@@ -47,12 +50,14 @@ class ContactController extends Controller
         return view('admin', compact('contacts', 'categories'));
     }
 
+    // モーダル画面での削除処理
     public function delete(Request $request)
     {
         Contact::find($request->id)->delete();
         return redirect('/admin');
     }
 
+    // 検索処理
     public function search(Request $request)
     {
         $contacts = Contact::with('category')
@@ -65,6 +70,7 @@ class ContactController extends Controller
         return view('admin', compact('contacts', 'categories'));
     }
 
+    // CSVへの書き出し処理
     public function export(Request $request)
     {
         $contacts = Contact::with('category')
@@ -110,12 +116,14 @@ class ContactController extends Controller
         return response()->stream($callback, 200, $headers);
     }
 
+    // お問い合わせ画面処理
     public function contact()
     {
         $categories = Category::all();
         return view('contact', compact('categories'));
     }
 
+    // お問い合わせ確認画面処理
     public function confirm(ContactRequest $request)
     {
         $tel = $request->tel1 . $request->tel2 . $request->tel3;
@@ -139,11 +147,13 @@ class ContactController extends Controller
         return view('confirm', compact('contact', 'category'));
     }
 
+    // 確認画面から修正ボタン押下時の処理
     public function modify(Request $request)
     {
         return redirect('/')->withInput();
     }
 
+    // サンクス画面＋データ保存処理
     public function thanks(Request $request)
     {
         $contact = $request->only([
